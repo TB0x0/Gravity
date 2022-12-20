@@ -1,0 +1,14 @@
+1. Physics Solver  
+
+- Closing the tab on the browser for more than 1 sec makes the objects explode because of the delta_time variable from the Ticker becoming too big. 
+
+- Can be fixed by listening for unload events and setting Ticker.time = 0; and the next time when the user opens it, setting the Ticker.time to 1 and setting dt to 0
+
+2. Renderer 
+
+- Renderer.dom element get's streched in the y axis when opened on any browser on Android.
+
+3. Quadtree / Spatial tree insertion method must be made more efficient.
+
+4. Objects get too fast if the big mass is moved too quickly, can be done by maybe clamping it's velocity. Using a global resistance can be a good option but then things won't orbit each other.
+
