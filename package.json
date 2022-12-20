@@ -1,0 +1,24 @@
+{
+  "name": "gravity",
+  "version": "1.0.0",
+  "description": "Newtonian gravity simulation",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "http-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/North077/Gravity.git"
+  },
+  "keywords": [],
+  "author": "North077",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/North077/Gravity/issues"
+  },
+  "homepage": "https://github.com/North077/Gravity#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
