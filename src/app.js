@@ -46,11 +46,11 @@ document.body.appendChild(stats.dom);
 
 const log = console.log;
 
-let ParticleCount = 2;
+let ParticleCount = 512;
 
 const ParticleSpawnArea = 100;
 
-const _fast = 50000;
+const _fast = 0; //can be 50k+, runs at 30fps on a smartphone 
 
 const options = {
 
@@ -164,7 +164,7 @@ Ticker.onTick((dt) => {
 
   Physics.step_1Mass(dt, Bigboi);
 
-  /*
+
 
   if (options.visualiseSpatialTree) {
 
@@ -182,7 +182,7 @@ Ticker.onTick((dt) => {
 
   }
 
-  */
+
 
   Renderer.render(Physics.world);
 
