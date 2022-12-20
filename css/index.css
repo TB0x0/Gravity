@@ -1,0 +1,19 @@
+body {
+
+  margin: 0;
+
+  padding: 0;
+
+  background: #001e2b;
+
+}
+
+canvas {
+
+  display: block;
+
+  margin: 0;
+
+  padding: 0;
+
+}
