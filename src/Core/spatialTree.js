@@ -161,95 +161,29 @@ export class spatialTree {
     );
 
     const depth = this.depth + 1;
+    
+    // Create 1 node for each quadrant
+    for(let n=0; n < 4; n++){
+      this.nodes[n] = new spatialTree(
 
-    // top left node
+        new bounds({
 
-    this.nodes[0] = new spatialTree(
+          position: new Vector2(
 
-      new bounds({
+            this.bounds.position.x,
 
-        position: new Vector2(
+            this.bounds.position.y
 
-          this.bounds.position.x,
+          ),
 
-          this.bounds.position.y
+          size: new Vector2(mid.x, mid.y),
 
-        ),
+        }),
 
-        size: new Vector2(mid.x, mid.y),
+        depth
 
-      }),
-
-      depth
-
-    );
-
-    // top right node
-
-    this.nodes[1] = new spatialTree(
-
-      new bounds({
-
-        position: new Vector2(
-
-          this.bounds.position.x + mid.x,
-
-          this.bounds.position.y
-
-        ),
-
-        size: new Vector2(mid.x, mid.y),
-
-      }),
-
-      depth
-
-    );
-
-    // bottom left node
-
-    this.nodes[2] = new spatialTree(
-
-      new bounds({
-
-        position: new Vector2(
-
-          this.bounds.position.x,
-
-          this.bounds.position.y + mid.y
-
-        ),
-
-        size: new Vector2(mid.x, mid.y),
-
-      }),
-
-      depth
-
-    );
-
-    // bottom right node
-
-    this.nodes[3] = new spatialTree(
-
-      new bounds({
-
-        position: new Vector2(
-
-          this.bounds.position.x + mid.x,
-
-          this.bounds.position.y + mid.y
-
-        ),
-
-        size: new Vector2(mid.x, mid.y),
-
-      }),
-
-      depth
-
-    );
-
+      );
+    }
   }
 
   /**
